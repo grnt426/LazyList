@@ -62,6 +62,22 @@ public class LazyListTest extends TestCase {
 		assertEquals( (element / divisor), list.getElement(0));
 	}
 
+	public void testAdd() throws Exception {
+		int element = 10;
+		int adder = 5;
+		list.addElement(element);
+		list.add(adder);
+		assertEquals( (element + adder), list.getElement(0));
+	}
+
+	public void testSubtract() throws Exception {
+			int element = 10;
+			int subtractor = 5;
+			list.addElement(element);
+			list.subtract(subtractor);
+			assertEquals( (element - subtractor), list.getElement(0));
+		}
+
 	public void testReplace() throws Exception {
 		int elementOne = 4;
 		int elementTwo = 6;

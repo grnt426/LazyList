@@ -57,6 +57,14 @@ public class LazyList {
 		operations.add(new DivideOperation(divisor));
 	}
 
+	public void add(int adder){
+		operations.add(new AdditionOperation(adder));
+	}
+
+	public void subtract(int subtractor){
+		operations.add(new SubtractionOperation(subtractor));
+	}
+
 	public int getSize() {
 		return list.size();
 	}
