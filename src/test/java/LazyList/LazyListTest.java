@@ -32,7 +32,7 @@ public class LazyListTest extends TestCase {
 		assertEquals( (element * multiplier), list.getElement(0));
 	}
 
-	public void testMultiplySeveral() throws Exception{
+	public void testMultiplySeveral() throws Exception {
 		int element = 4;
 		int multiplierOne = 2;
 		int multiplierTwo = 4;
@@ -43,7 +43,7 @@ public class LazyListTest extends TestCase {
 				list.getElement(0));
 	}
 
-	public void testMultiplySeveralElements() throws Exception{
+	public void testMultiplySeveralElements() throws Exception {
 		int elementOne = 4;
 		int elementTwo = 6;
 		int multiplier = 3;
@@ -52,5 +52,32 @@ public class LazyListTest extends TestCase {
 		list.multiply(multiplier);
 		assertEquals( (elementOne * multiplier), list.getElement(0));
 		assertEquals( (elementTwo * multiplier), list.getElement(1));
+	}
+
+	public void testDivide() throws Exception {
+		int element = 6;
+		int divisor = 3;
+		list.addElement(element);
+		list.divide(divisor);
+		assertEquals( (element / divisor), list.getElement(0));
+	}
+
+	public void testReplace() throws Exception {
+		int elementOne = 4;
+		int elementTwo = 6;
+		list.addElement(elementOne);
+		list.replace(0, elementTwo);
+		assertEquals(elementTwo, list.getElement(0));
+	}
+
+	public void testReplaceWithOperations() throws Exception {
+		int elementOne = 4;
+		int elementTwo = 6;
+		int multiplier = 3;
+
+		list.addElement(elementOne);
+		list.multiply(multiplier);
+		list.replace(0, elementTwo);
+		assertEquals(elementTwo, list.getElement(0));
 	}
 }

@@ -20,4 +20,8 @@ public class MultiplyOperationTest extends TestCase {
 	public void testEvaluate() throws Exception {
 		assertEquals(product, mo.evaluate(lhs));
 	}
+
+	public void testEvaluateInverse() throws Exception {
+		assertEquals(lhs, mo.evaluateInverse(product));
+	}
 }

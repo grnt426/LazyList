@@ -6,4 +6,6 @@ package LazyList;
 public interface Operation {
 
 	public int evaluate(int lhs);
+
+	public int evaluateInverse(int lhs);
 }
