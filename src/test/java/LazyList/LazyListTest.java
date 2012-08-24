@@ -31,4 +31,26 @@ public class LazyListTest extends TestCase {
 		list.multiply(multiplier);
 		assertEquals( (element * multiplier), list.getElement(0));
 	}
+
+	public void testMultiplySeveral() throws Exception{
+		int element = 4;
+		int multiplierOne = 2;
+		int multiplierTwo = 4;
+		list.addElement(element);
+		list.multiply(multiplierOne);
+		list.multiply(multiplierTwo);
+		assertEquals( (element * multiplierOne * multiplierTwo),
+				list.getElement(0));
+	}
+
+	public void testMultiplySeveralElements() throws Exception{
+		int elementOne = 4;
+		int elementTwo = 6;
+		int multiplier = 3;
+		list.addElement(elementOne);
+		list.addElement(elementTwo);
+		list.multiply(multiplier);
+		assertEquals( (elementOne * multiplier), list.getElement(0));
+		assertEquals( (elementTwo * multiplier), list.getElement(1));
+	}
 }
